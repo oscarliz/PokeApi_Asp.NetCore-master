@@ -1,0 +1,21 @@
+<br>
+<input type="text" class="form-control" [(ngModel)]="name"  name="name" placeholder="Buscar pokemon!" (ngModelChange)="Search()"/>
+<br>
+<table class="table table-striped">
+  <thead>
+    <tr *ngIf="Pokemones && Pokemones.length > 0">
+      <th scope="col">ID</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Url</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let poke of Pokemones | paginate: {itemsPerPage:15,currentPage:p}; let i =index">
+      <td>{{i+1}}</td>
+      <td> {{poke.name}}</td>
+      <td>{{poke.url}}</td> 
+      <td><button type="button" class="btn btn-primary" onclick="window.print('file.pdf');">Descargar info</button></td>  
+    </tr>
+  </tbody>
+  <pagination-controls (pageChange) = "p = $event"></pagination-controls>
+</table> 
