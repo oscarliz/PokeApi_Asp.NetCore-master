@@ -1,4 +1,4 @@
-# Aplicación Web Busca tu Pokemon! 🦦
+# Aplicación Web, Busca tu Pokemon! 🦦
 
 Hola y bienvenido, Solvex Dominicana,SRL!
 
