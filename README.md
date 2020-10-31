@@ -52,6 +52,7 @@ Este se ejecuta en segundo plano de forma automática, por lo que los recursos d
 _IDE Visual Studio 2019 community y IDLE visual studio Code_
 
 * [Angular](https://cli.angular.io/) - AngularCLI
+* [TypeScript](https://cli.angular.io/) - TypeScript
 * [DotNET](https://dotnet.microsoft.com/download/dotnet-core/3.1) - Net Core 3.1
 * [Bootstrap](https://getbootstrap.com/) - Usado para la interfaz
 
