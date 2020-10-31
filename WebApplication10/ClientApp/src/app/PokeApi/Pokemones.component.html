@@ -14,8 +14,8 @@
       <td>{{i+1}}</td>
       <td> {{poke.name}}</td>
       <td>{{poke.url}}</td> 
-      <td><button type="button" class="btn btn-primary" onclick="window.print('file.pdf');">Descargar info</button></td>  
+      <td><button type="button" class="btn btn-primary" onclick="window.print('file.pdf');"><i class="fas fa-file-download"></i></button></td>  
     </tr>
   </tbody>
-  <pagination-controls (pageChange) = "p = $event"></pagination-controls>
 </table> 
+<pagination-controls (pageChange) = "p = $event"></pagination-controls>
