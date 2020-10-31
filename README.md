@@ -1,5 +1,3 @@
-Para abrir el proyecto es descargar el archivo el cual tiene el nombre de PokeApi_Asp.NetCore-master-main descomprimirlo en la ruta que deseen, luego de eso deben de ingresar a la carpeta WebApplication10, ingresar a la carpeta ClientApp y dentro del directorio abriremos el CMD y en el CMD colocaremos npm install esperamos que culmine el proceso de descarga de paquetes cerraremos el CMD y retrocedermos hasta encotrar el ejcutable de Microsoft Visual el cual tiene el nombre WebApplication10 abriremos ese archivo y compilariamos el proyecto.
-
 # Aplicación Web Busca tu Pokemon! 🦦
 
 Hola y bienvenido, Solvex Dominicana,SRL!
@@ -8,14 +6,11 @@ _Esta es una aplicación web que permita buscar pokemones por nombre y listar lo
 
 ## Comenzando 🚀
 
-_Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
-
 Mira **Deployment** para conocer como desplegar el proyecto.
-
 
 ### Pre-requisitos 📋
 
-_Que cosas necesitas para instalar el software y como instalarlas_
+_Que cosas necesitamos para instalar la aplicacion y compilar_
 
 ```
 Para poder compilar este proyecto debes de tener instalado visual studio 2019 con el SDK 3.1 dotnet y un navegador de prferencia por ej: Google Chrome 
@@ -23,22 +18,34 @@ Para poder compilar este proyecto debes de tener instalado visual studio 2019 co
 
 ### Instalación 🔧
 
-_Una serie de ejemplos paso a paso que te dice lo que debes ejecutar para tener un entorno de desarrollo ejecutandose_
-
-_Dí cómo será ese paso_
+_Paso #1_
 
 ```
-Da un ejemplo
+La carpeta la cual tiene el nombre de PokeApi_Asp.NetCore-master-main descomprimirla.
 ```
 
-_Y repite_
+_Paso #2_
 
 ```
-hasta finalizar
+ingresar a la carpeta WebApplication10 una vez dentro ingresamos a la carpeta ClientApp y dentro del directorio abriremos el CMD.
 ```
 
-_Finaliza con un ejemplo de cómo obtener datos del sistema o como usarlos para una pequeña demo_
+_Paso #3_
 
+```
+En el CMD colocaremos npm install esperamos que culmine el proceso de descarga de paquetes cerraremos el CMD. 
+```
+
+_Paso #4_
+
+```
+Retrocedermos carpeta por carpeta hasta encotrar el ejcutable de Microsoft Visual el cual tiene el nombre WebApplication10 abriremos ese archivo y compilariamos el proyecto`
+```
+_Paso #5_
+
+```
+Este se ejecuta en segundo plano de forma automática, por lo que los recursos del lado del cliente se crean dinámicamente a pedido y la página se actualiza cuando modifica cualquier archivo.
+```
 
 ## Construido con 🛠️
 
