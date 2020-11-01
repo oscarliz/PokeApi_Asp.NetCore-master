@@ -1,7 +1,10 @@
-sbody {
+.body {
+  display: flex;
+  justify-content: center;
 }
 
 .botones
 {
   padding:20px;
 }
+
