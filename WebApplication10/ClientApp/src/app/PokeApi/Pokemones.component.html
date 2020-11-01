@@ -1,29 +1,26 @@
 <br>
 <form class="form-inline">
-  <i class="fas fa-search" aria-hidden="true"></i>
-  <input class="form-control" type="text"
-    aria-label="Search" [(ngModel)]="name"  name="name" placeholder="Buscar pokemon!" (ngModelChange)="Search()"/>
+    <i class="fas fa-search" aria-hidden="true"></i>
+    <input class="form-control" type="text" aria-label="Search" [(ngModel)]="name" name="name" placeholder="Buscar pokemon!" (ngModelChange)="Search()" />
 </form>
 
 <br>
 <table class="table table-striped">
-  <thead class="bg-primary">
-    <tr *ngIf="Pokemones && Pokemones.length > 0">
-      <th scope="col">#</th>
-      <th scope="col">Nombre</th>
-      <th scope="col">Url</th>
-      <th>Accion</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let poke of Pokemones | paginate: {itemsPerPage:15,currentPage:p}; let i =index">
-      <td>{{i+1}}</td>
-      <td> {{poke.name}}</td>
-      <td>{{poke.url}}</td> 
-      <td><button type="button" class="btn btn-primary" onclick="window.print('file.txt');"><i class="fas fa-file-download"></i></button></td>
-    </tr>
-  </tbody>
-</table> 
-<pagination-controls (pageChange) = "p = $event"></pagination-controls>
-
-
+    <thead class="bg-primary">
+        <tr *ngIf="Pokemones && Pokemones.length > 0">
+            <th scope="col">#</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Url</th>
+            <th>Accion</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let poke of Pokemones | paginate: {itemsPerPage:15,currentPage:p}; let i =index">
+            <td>{{i+1}}</td>
+            <td>{{poke.name}}</td>
+            <td>{{poke.url}}</td>
+            <td><button type="button" class="btn btn-primary" onclick="window.print('file.txt');"><i class="fas fa-file-download"></i></button></td>
+        </tr>
+    </tbody>
+</table>
+<pagination-controls (pageChange)="p = $event"></pagination-controls>

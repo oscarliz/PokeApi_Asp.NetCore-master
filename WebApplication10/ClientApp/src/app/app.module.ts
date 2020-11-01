@@ -12,7 +12,6 @@ import { ConsumirApi } from './PokeApi/Pokemones.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { Ng2OrderModule } from 'ng2-order-pipe';
-import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +20,6 @@ import { FooterComponent } from './footer/footer.component';
     HomeComponent,
     CounterComponent,
     ConsumirApi,
-    FooterComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
