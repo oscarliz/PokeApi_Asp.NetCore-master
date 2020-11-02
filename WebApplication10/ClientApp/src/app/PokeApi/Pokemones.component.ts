@@ -14,7 +14,13 @@ export class ConsumirApi
   p:number = 1;
   Pokemones: Result[] =[];
 
- 
+  Search(){
+    this.Pokemones = this.Pokemones.filter(res=>{
+      return res.name.toLocaleLowerCase().match(this.name.toLocaleLowerCase());
+    })
+    
+  }
+
   constructor(http: HttpClient, @Inject('BASE_URL') baseUrl: string)
   {
     http.get<Result[]>(baseUrl + "api/PokeApi/Index").subscribe(result => {
@@ -23,15 +29,7 @@ export class ConsumirApi
 
     }, error => console.error(error));
   }
-  Search(){
-
-    this.Pokemones = this.Pokemones.filter(res=>{
-      return res.name.toLocaleLowerCase().match(this.name.toLocaleLowerCase());
-    });
-    
-  }
 } 
-
 
 
 

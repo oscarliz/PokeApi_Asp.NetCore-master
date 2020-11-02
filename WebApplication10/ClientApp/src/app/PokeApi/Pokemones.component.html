@@ -1,9 +1,6 @@
+<h1>Pokedex<img src="assets/img/pokedex.jpg" width="30px" height="30px"> </h1>
 <br>
-<form class="form-inline">
-    <i class="fas fa-search" aria-hidden="true"></i>
-    <input class="form-control" type="text" aria-label="Search" [(ngModel)]="name" name="name" placeholder="Buscar pokemon!" (ngModelChange)="Search()" />
-</form>
-
+<input type="text" class="form-control" placeholder="Busca tu pokemon!" name="filterPost" [(ngModel)]="filterPost" />
 <br>
 <table class="table table-striped">
     <thead class="bg-primary">
@@ -15,12 +12,13 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let poke of Pokemones | paginate: {itemsPerPage:15,currentPage:p}; let i =index">
+        <tr *ngFor="let poke of Pokemones | filter:filterPost | paginate: {itemsPerPage:15,currentPage:p}; let i =index">
             <td>{{i+1}}</td>
-            <td>{{poke.name}}</td>
+            <td> {{poke.name}}</td>
             <td>{{poke.url}}</td>
-            <td><button type="button" class="btn btn-primary" onclick="window.print('file.txt');"><i class="fas fa-file-download"></i></button></td>
+            <td><button type="button" class="btn btn-primary" onclick="window.print();"><i class="fas fa-file-download"></i></button></td>
         </tr>
     </tbody>
+    <br>
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
 </table>
-<pagination-controls (pageChange)="p = $event"></pagination-controls>

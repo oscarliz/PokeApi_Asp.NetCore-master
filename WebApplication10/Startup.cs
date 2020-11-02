@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SpaServices.AngularCli;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.OpenApi.Models;
 
 namespace WebApplication10
 {
@@ -20,6 +21,11 @@ namespace WebApplication10
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version ="v1"});
+            });
 
             // En producción, los archivos Angular se servirán desde este directorio
             services.AddSpaStaticFiles(configuration =>
@@ -49,6 +55,15 @@ namespace WebApplication10
                     name: "default",
                     template: "{controller}/{action=Index}/{id?}");
             });
+
+            //documentacion con swagger
+            app.UseSwagger();
+
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "MY API V1");
+            }
+            );
 
             app.UseSpa(spa =>
             {
