@@ -12,13 +12,64 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let poke of Pokemones | filter:filterPost | paginate: {itemsPerPage:15,currentPage:p}; let i =index">
+        <tr id="{{poke.name}}" *ngFor="let poke of Pokemones | filter:filterPost | paginate: {itemsPerPage:1,currentPage:p}; let i =index">
             <td>{{i+1}}</td>
             <td> {{poke.name}}</td>
             <td>{{poke.url}}</td>
-            <td><button type="button" class="btn btn-primary" onclick="window.print();"><i class="fas fa-file-download"></i></button></td>
+            <td><button value="{{poke.url}}" id="{{poke.name}}" type="button" class="btn btn-primary" onclick="openModal(this.id)"><i class="fas fa-eye"></i></button>
+                <button onclick="window.print();" class="btn btn-primary"><i class="fas fa-file-download"></i></button></td>
         </tr>
     </tbody>
+
     <br>
     <pagination-controls (pageChange)="p = $event"></pagination-controls>
 </table>
+
+
+
+
+<div class="container">
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Pelea!</h4>
+                </div>
+                <div class="modal-body">
+                    <table class="table table-striped">
+                        <thead class="bg-primary">
+                            <tr *ngIf="Pokemones && Pokemones.length > 0">
+                                <th scope="col">#</th>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Url</th>
+                                <th>Accion</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let poke of Pokemones | filter:filterPost | paginate: {itemsPerPage:1,currentPage:p}; let i =index">
+                                <td>{{i+1}}</td>
+                                <td> {{poke.name}}</td>
+                                <td>{{poke.url}}</td>
+                                <td><button onclick="window.print();" class="btn btn-primary"><i class="fas fa-file-download"></i></button></td>
+
+                            </tr>
+                        </tbody>
+                        <br>
+
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>

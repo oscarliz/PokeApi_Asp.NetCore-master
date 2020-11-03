@@ -8,10 +8,49 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 
 <body>
     <app-root><img src="assets/img/loading.gif" width="100%" height="100%"></app-root>
 </body>
+<script>
+    function openModal(id) {
+        const pokeselect = document.getElementById(id).value
+        const filterpoke = document.getElementById('pokeAlone')
+
+
+        $("#myModal").modal();
+
+        filterpoke.value = pokeselect;
+    };
+
+    function imprim1(imp1) {
+        var printContents = document.getElementById(imp1).innerHTML;
+        w = window.open();
+        w.document.write(printContents);
+        w.document.close(); // necessary for IE >= 10
+        w.focus(); // necessary for IE >= 10
+        w.print();
+        w.close();
+        return true;
+    }
+</script>
+
+
+<script>
+    function toggle_it(itemID) {
+        // Toggle visibility between none and '' 
+        if ((document.getElementById(itemID).style.display == 'none')) {
+            document.getElementById(itemID).style.display = ''
+            event.preventDefault()
+        } else {
+            document.getElementById(itemID).style.display = 'none';
+            event.preventDefault()
+        }
+    }
+</script>
 
 </html>
