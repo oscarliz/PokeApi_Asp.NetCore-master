@@ -27,13 +27,13 @@ La carpeta la cual tiene el nombre de PokeApi_Asp.NetCore-master-main descomprim
 _Paso #2_
 
 ```
-ingresar a la carpeta WebApplication10 una vez dentro ingresamos a la carpeta ClientApp y dentro del directorio abriremos el CMD.
+ingresar a la carpeta WebApplication10 una vez dentro ingresamos a la carpeta ClientApp y dentro del directorio abriremos el script llamado npm_install.
 ```
 
 _Paso #3_
 
 ```
-En el CMD colocaremos npm install esperamos que culmine el proceso de descarga de paquetes cerraremos el CMD. 
+Esperamos a que el poceso culmine. 
 ```
 
 _Paso #4_
@@ -46,6 +46,9 @@ _Paso #5_
 ```
 Este se ejecuta en segundo plano de forma automática, por lo que los recursos del lado del cliente se crean dinámicamente a pedido y la página se actualiza cuando modifica cualquier archivo.
 ```
+
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/46871300/97822536-b275dd00-1c8c-11eb-9027-fa8fbb496d20.gif)
+
 
 ## Construido con 🛠️
 
